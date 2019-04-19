@@ -1,6 +1,9 @@
 int getmq(){
 	dspmq();
 	strmq();
-	endmq();
-	return 0;
+	int err = endmq();
+	if(err == 0)
+		return 0;
+	else
+		return -1;
 }
